@@ -36,6 +36,11 @@ return {
           -- "go",
         },
         ignore_filetypes = { -- disable format on save for specified filetypes
+          -- ignoring because eslint should take care of formatting with prettier rules
+          "typescript",
+          "typescriptreact",
+          "javascript",
+          "javascriptreact",
           -- "python",
         },
       },

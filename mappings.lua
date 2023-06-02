@@ -1,6 +1,19 @@
 local utils = require "astronvim.utils"
 local get_icon = utils.get_icon
 
+local function EslintOrFormat()
+  local clients = vim.lsp.get_active_clients()
+
+  for _, client in ipairs(clients) do
+    if client.name == "tsserver" then
+      vim.cmd.EslintFixAll()
+      return
+    end
+  end
+
+  vim.cmd.Format()
+end
+
 local sections = {
   s = { desc = get_icon("Search", 1, true) .. "[S]earch" },
 }
@@ -45,6 +58,7 @@ return {
     },
     ["<leader>?"] = { function() require("telescope.builtin").oldfiles() end, desc = "[?] Search recent files" },
     ["<F1>"] = { "<cmd>Neotree toggle<cr>", desc = "Toggle Explorer" },
+    ["<F2>"] = { EslintOrFormat, desc = "Eslint or format" },
     ["<F3>"] = {
       function()
         vim.cmd.UndotreeToggle()
