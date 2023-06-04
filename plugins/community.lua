@@ -11,4 +11,5 @@ return {
   { import = "astrocommunity.pack.go" },
   { import = "astrocommunity.pack.rust" },
   { import = "astrocommunity.pack.vue" },
+  { import = "astrocommunity.pack.java" },
 }

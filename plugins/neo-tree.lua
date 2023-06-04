@@ -12,5 +12,9 @@ return {
     opts.window.mappings["<cr>"] = "open_with_window_picker"
     opts.window.mappings["s"] = "split_with_window_picker"
     opts.window.mappings["S"] = "vsplit_with_window_picker"
+    opts.source_selector.sources = {
+      { source = "filesystem", display_name = " 󰉓 Files" },
+      { source = "git_status", display_name = " 󰊢 Git" },
+    }
   end,
 }
