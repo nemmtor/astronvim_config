@@ -6,14 +6,8 @@ local function EslintOrFormat()
 
   for _, client in ipairs(clients) do
     if client.name == "tsserver" then
-      vim.api.nvim_exec(
-        [[
-        normal mF
-        %!eslint_d --stdin --fix-to-stdout --stdin-filename %
-        normal `F
-      ]],
-        false
-      )
+      vim.cmd.EslintFixAll()
+      -- vim.cmd("%!eslint_d --stdin --fix-to-stdout --stdin-filename %<CR>`F")
       return
     end
   end
