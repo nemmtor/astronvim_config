@@ -8,5 +8,4 @@ return {
   { import = "astrocommunity.colorscheme.dracula-nvim" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.yaml" },
-  { import = "astrocommunity.pack.rust" },
 }

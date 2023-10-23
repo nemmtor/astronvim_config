@@ -86,5 +86,10 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+    vim.api.nvim_create_autocmd("User", {
+      desc = "Set number in Telescope",
+      pattern = "TelescopePreviewerLoaded",
+      command = "setlocal number",
+    })
   end,
 }
