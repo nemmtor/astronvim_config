@@ -5,7 +5,7 @@ return {
   { import = "astrocommunity.pack.prisma" },
   { import = "astrocommunity.pack.docker" },
   { import = "astrocommunity.pack.markdown" },
-  { import = "astrocommunity.colorscheme.dracula-nvim" },
+  { import = "astrocommunity.colorscheme.tokyonight-nvim" },
   { import = "astrocommunity.pack.lua" },
   { import = "astrocommunity.pack.yaml" },
 }

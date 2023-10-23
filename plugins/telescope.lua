@@ -1,5 +1,6 @@
 return {
   "nvim-telescope/telescope.nvim",
+  lazy = false,
   opts = function(_, opts)
     opts.defaults.layout_config = {
       horizontal = { prompt_position = "top", preview_width = 0.40 },
